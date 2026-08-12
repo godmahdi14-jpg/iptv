@@ -1,0 +1,33 @@
+name: Update IPTV Playlist
+
+on:
+  schedule:
+    # هر روز ساعت ۰۳:۰۰ به وقت UTC اجرا می‌شه (می‌تونید تغییرش بدید)
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}  # امکان اجرای دستی از تب Actions
+
+permissions:
+  contents: write
+
+jobs:
+  update-playlist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Filter playlist
+        run: python filter_playlist.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add playlist.m3u
+          git diff --quiet --cached || git commit -m "Update playlist $(date -u +'%Y-%m-%d')"
+          git push

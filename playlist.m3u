@@ -791,7 +791,7 @@ https://ncdn.telewebion.ir/semnan/live/playlist.m3u8
 https://ncdn.telewebion.ir/sepehr/live/playlist.m3u8
 #EXTINF:-1 tvg-id="SercemTV.tr@HD" tvg-logo="https://sercemtv.com.tr/sercemlogo.jpg" group-title="Culture;General;Religious",Sercem TV (1080p)
 https://canli.sercemtv.com.tr/hls/0/stream.m3u8
-#EXTINF:-1 tvg-id="SetarehTV.uk@HD" tvg-logo="" group-title="Undefined",Setareh TV
+#EXTINF:-1 tvg-id="SetarehTV.uk@HD" tvg-logo="https://www.setareh.tv/images/logo/logo.webp" group-title="Undefined",Setareh TV
 https://setarehhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="Shabakeh7.us@SD" tvg-logo="https://i.imgur.com/oHmh5Jb.png" group-title="Entertainment",Shabakeh 7
 https://sh7hls.wns.live/hls/stream.m3u8
